@@ -1,10 +1,15 @@
 
 
-const repeatString = function repeatStringThreeTimes(str, num) {
-    return str.repeat([3]); 
+const repeatString = function(str, num) {
+    let string = '';
+    for (i = 0; i < num; i++) {
+        string += str;
+    }
+    return string;
+    
+    //return str.repeat([3]);
     
 };
-
 
 
 
