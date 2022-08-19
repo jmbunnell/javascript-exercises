@@ -1,5 +1,6 @@
+var str = ["hello", "there"];
+
 const reverseString = function(str) {
-    var str = ["hello", "there"];
     var splitString = str.split("");
     var reverseArray = splitString.reverse();
     var joinArray = reverseArray.join("");
