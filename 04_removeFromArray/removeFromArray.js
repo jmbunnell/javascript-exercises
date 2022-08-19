@@ -1,10 +1,15 @@
 
 
-const removeFromArray = function() {
-    let numbers = [1,2,3,4];
-    let array = numbers.filter((n) => {return n != 3});
-    return array;
-};
+const removeFromArray = function (...args) {
+    const array = args[0];
+    const newArray = [];
+    array.forEach((item) => {
+      if (!args.includes(item)) {
+        newArray.push(item);
+      }
+    });
+    return newArray;
+  };
 
 // Do not edit below this line
 module.exports = removeFromArray;
