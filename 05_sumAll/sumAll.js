@@ -1,18 +1,19 @@
-const sumAll = function(arr) {
-
-    let fullArr = [1, 2, 3, 4];
-    let sum = 0;
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
-
-    for (let i = arr[0]; i <= arr[1]; i++) {
-        fullArr.push(i);
+const sumAll = function(min, max) {
+    if (!Number.isInteger(min) || !Number.isInteger(max)) return "ERROR";
+    if (min < 0 || max < 0) return "ERROR";
+    if (min > max) {
+      const temp = min;
+      min = max;
+      max = temp;
     }
-
-    sum = fullArr.reduce(reducer);
-
+    let sum = 0;
+    for (let i = min; i < max + 1; i++) {
+      sum += i;
+    }
     return sum;
-}
+  };
+  
+  module.exports = sumAll;
 
 /*const sumAll = function() {
 
