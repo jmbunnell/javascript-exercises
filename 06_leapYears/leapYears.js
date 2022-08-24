@@ -1,10 +1,10 @@
-const leapYears = function(year) {
+const leapYears = function() {
     let year = '';
     let numYear = Number(year);
     if (numYear % 4 == 0 && numYear % 100 != 0 || numYear % 400 == 0) {
-        return 'It is a leap year!'
+        return true
     } else {
-        return 'It is not a leap year!'
+        return false
     }
 };
 
